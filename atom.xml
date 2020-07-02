@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ugvol</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://ugvol.github.io/"/>
+  <updated>2020-07-01T11:50:11.880Z</updated>
+  <id>https://ugvol.github.io/</id>
+  
+  <author>
+    <name>Ugvol</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>grid布局</title>
+    <link href="https://ugvol.github.io/2020/05/30/grid%E5%B8%83%E5%B1%80/"/>
+    <id>https://ugvol.github.io/2020/05/30/grid%E5%B8%83%E5%B1%80/</id>
+    <published>2020-05-30T09:51:55.000Z</published>
+    <updated>2020-07-01T11:50:11.880Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="grid布局"><a href="#grid布局" class="headerlink" title="grid布局"></a>grid布局</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;grid布局&quot;&gt;&lt;a href=&quot;#grid布局&quot; class=&quot;headerlink&quot; title=&quot;grid布局&quot;&gt;&lt;/a&gt;grid布局&lt;/h3&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://Ugvol.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://Ugvol.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>滚动视差</title>
+    <link href="https://ugvol.github.io/2020/04/30/%E6%BB%9A%E5%8A%A8%E8%A7%86%E5%B7%AE/"/>
+    <id>https://ugvol.github.io/2020/04/30/%E6%BB%9A%E5%8A%A8%E8%A7%86%E5%B7%AE/</id>
+    <published>2020-04-30T09:26:54.000Z</published>
+    <updated>2020-07-02T09:50:08.991Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是滚动视差"><a href="#什么是滚动视差" class="headerlink" title="什么是滚动视差"></a>什么是滚动视差</h3><p>视差滚动（Parallax Scrolling）是指让多层背景以不同的速度移动，形成立体的运动效果。滚动屏幕时，网页中元素的位置会发生变化。但是不同的元素位置变化的速度不同，导致网页中产生分层元素的错觉。</p><h3 id="如何实现滚动视差"><a href="#如何实现滚动视差" class="headerlink" title="如何实现滚动视差"></a>如何实现滚动视差</h3><p>1.通过css的background-attachment属性</p><p>background-attachment属性决定背景图像的位置是在视口内固定，还是随着包含它的区块滚动。它有三个属性：<br></p><ul>    <li>fixed: 背景相对于视口固定</li>    <li>scroll: 背景相对于元素内容固定</li>    <li>local: 背景回随着元素内容滚动</li></ul>实现方式与代码示例：<br>给子元素添加background-attachment: fixed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; html</span><br><span class="line">&lt;div class&#x3D;&quot;father&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;2&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;3&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;4&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;5&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; css</span><br><span class="line">.father,.childrens&#123;</span><br><span class="line">    width: 100vw;</span><br><span class="line">    height: 100vh;</span><br><span class="line">    background-color: cornflowerblue;</span><br><span class="line">    text-align: center;</span><br><span class="line">    line-height: 100vh;</span><br><span class="line">    font-size: 30px;</span><br><span class="line">    color: #ffffff;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:first-child&#123;</span><br><span class="line">    background: url(&#39;&#39;) center center &#x2F; cover;</span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:nth-child(3)&#123;</span><br><span class="line">    background: url(&#39;&#39;) center center &#x2F; cover;</span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:nth-child(5)&#123;</span><br><span class="line">    background: url(&#39;&#39;) center center &#x2F; cover;</span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2.通过css3的transform:translate3d<br><br>&nbsp;&nbsp;&nbsp;&nbsp;1).父元素设置transform-style: preserve-3d;使子元素将保留其 3D 位置。<br>&nbsp;&nbsp;&nbsp;&nbsp;2).父元素设置perspective: x px;定义 3D 元素距视图的距离<br>&nbsp;&nbsp;&nbsp;&nbsp;3).子元素设置分别设置不同的transform: translateZ()，这样不同子元素在 3D Z 轴方向距离屏幕的距离也就不一样;</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; html</span><br><span class="line">&lt;div class&#x3D;&quot;father&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;2&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;childrens&quot;&gt;3&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;bottom&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F; css</span><br><span class="line">html &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    height: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">    padding: 0;</span><br><span class="line">    margin: 0;</span><br><span class="line">    transform-style: preserve-3d;</span><br><span class="line">    perspective: 1px;</span><br><span class="line">    overflow-y: scroll;</span><br><span class="line">    overflow-x: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.father &#123;</span><br><span class="line">    width: 100vw;</span><br><span class="line">    height: 200vh;</span><br><span class="line">    background: cornflowerblue;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:first-child &#123;</span><br><span class="line">    width: 100vw;</span><br><span class="line">    height: 100vh;</span><br><span class="line">    background: #8368ff;</span><br><span class="line">    transform: translateZ(0px);</span><br><span class="line">    margin-bottom: 50px;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:nth-child(2) &#123;</span><br><span class="line">    width: 100vw;</span><br><span class="line">    height: 100vh;</span><br><span class="line">    background: #67c23a;</span><br><span class="line">    transform: translateZ(-1px);</span><br><span class="line">    margin-bottom: 50px;</span><br><span class="line">&#125;</span><br><span class="line">.childrens:nth-child(3) &#123;</span><br><span class="line">    width: 100vw;</span><br><span class="line">    height: 100vh;</span><br><span class="line">    background: #e6a23c;</span><br><span class="line">    transform: translateZ(-2px);</span><br><span class="line">&#125;</span><br><span class="line">.bottom&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 200vh;</span><br><span class="line">    background-color:cornflowerblue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>3、react<br>使用：react-scroll-parallax<br>GitHub：<a href="https://github.com/jscottsmith/react-scroll-parallax" target="_blank" rel="noopener">https://github.com/jscottsmith/react-scroll-parallax</a><br>4、vue<br>使用：vue-parallax<br>GitHub：<a href="https://github.com/apertureless/vue-parallax" target="_blank" rel="noopener">https://github.com/apertureless/vue-parallax</a></p><p>参考文章：<br><a href="https://juejin.im/post/5e08b0f4e51d4557ec0317fd?utm_source=gold_browser_extension" target="_blank" rel="noopener">https://juejin.im/post/5e08b0f4e51d4557ec0317fd?utm_source=gold_browser_extension</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;什么是滚动视差&quot;&gt;&lt;a href=&quot;#什么是滚动视差&quot; class=&quot;headerlink&quot; title=&quot;什么是滚动视差&quot;&gt;&lt;/a&gt;什么是滚动视差&lt;/h3&gt;&lt;p&gt;视差滚动（Parallax Scrolling）是指让多层背景以不同的速度移动，形成立体的运动效果。
+      
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://Ugvol.github.io/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://Ugvol.github.io/tags/css/"/>
+    
+  </entry>
+  
+</feed>
